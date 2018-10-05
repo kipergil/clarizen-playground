@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC455FE5-2206-4610-AB9B-7D5C485F4125}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BBHPro.Playground</RootNamespace>
+    <AssemblyName>BBHPro.Playground</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ekin.Clarizen, Version=1.7.0.737, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ekin.Clarizen.1.7.0.737\lib\net452\Ekin.Clarizen.dll</HintPath>
+    </Reference>
+    <Reference Include="Ekin.Clarizen.POCO, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ekin.Clarizen.POCO.1.4.2\lib\net452\Ekin.Clarizen.POCO.dll</HintPath>
+    </Reference>
+    <Reference Include="Ekin.Email, Version=1.4.3.42536, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ekin.Email.1.4.3.42536\lib\net452\Ekin.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="Ekin.Encryption, Version=1.0.1.30044, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ekin.Encryption.1.0.1.30044\lib\net452\Ekin.Encryption.dll</HintPath>
+    </Reference>
+    <Reference Include="Ekin.Log, Version=1.0.9.4193, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ekin.Log.1.0.9.4193\lib\net452\Ekin.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Ekin.Rest, Version=1.1.3.24698, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ekin.Rest.1.1.3.24698\lib\net452\Ekin.Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectDumper, Version=1.0.0.12, Culture=neutral, PublicKeyToken=9e2fabf3af85dba9, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectDumper.1.0.0.12\lib\net35-Client\ObjectDumper.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid, Version=9.8.0.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sendgrid.9.9.0\lib\net452\SendGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClarizenRepository.cs" />
+    <Compile Include="Helpers\AlwaysConvert.cs" />
+    <Compile Include="Helpers\ExceptionHelper.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\ICacheManager.cs" />
+    <Compile Include="IClarizenRepository.cs" />
+    <Compile Include="Poco\Clarizen\AbsenceEntitlement.cs" />
+    <Compile Include="Poco\Clarizen\AbsenceRequest.cs" />
+    <Compile Include="Poco\Clarizen\CalendarException.cs" />
+    <Compile Include="Poco\Clarizen\CalendarExceptionInfo.cs" />
+    <Compile Include="Poco\Clarizen\CalendarInfo.cs" />
+    <Compile Include="Poco\Clarizen\CaseCustomerLink.cs" />
+    <Compile Include="Poco\Clarizen\ContactPerson.cs" />
+    <Compile Include="Poco\Clarizen\Customer.cs" />
+    <Compile Include="Poco\Clarizen\C_CRS.cs" />
+    <Compile Include="Poco\Clarizen\C_CRSCustomerLink.cs" />
+    <Compile Include="Poco\Clarizen\C_CRSEmail.cs" />
+    <Compile Include="Poco\Clarizen\C_CRSParticipant.cs" />
+    <Compile Include="Poco\Clarizen\C_UserBBHDepartment.cs" />
+    <Compile Include="Poco\Clarizen\C_UserBBHRegion.cs" />
+    <Compile Include="Poco\Clarizen\C_UserDiscipline.cs" />
+    <Compile Include="Poco\Clarizen\DataExport.cs" />
+    <Compile Include="Poco\Clarizen\DataImport.cs" />
+    <Compile Include="Poco\Clarizen\Discussion.cs" />
+    <Compile Include="Poco\Clarizen\Document.cs" />
+    <Compile Include="Poco\Clarizen\DurationConverter.cs" />
+    <Compile Include="Poco\Clarizen\EntityIdConverter.cs" />
+    <Compile Include="Poco\Clarizen\GroupHierarchyLink.cs" />
+    <Compile Include="Poco\Clarizen\GroupMemebershipLink.cs" />
+    <Compile Include="Poco\Clarizen\JobTitle.cs" />
+    <Compile Include="Poco\Clarizen\NonLaborResource.cs" />
+    <Compile Include="Poco\Clarizen\NonLaborResourceLinkDirect.cs" />
+    <Compile Include="Poco\Clarizen\NonLaborResourceTimePhase.cs" />
+    <Compile Include="Poco\Clarizen\Permission.cs" />
+    <Compile Include="Poco\Clarizen\Project.cs" />
+    <Compile Include="Poco\Clarizen\ProjectWorkItem.cs" />
+    <Compile Include="Poco\Clarizen\QueueTask.cs" />
+    <Compile Include="Poco\Clarizen\RegularResourceLink.cs" />
+    <Compile Include="Poco\Clarizen\ReportedRevenue.cs" />
+    <Compile Include="Poco\Clarizen\Request.cs" />
+    <Compile Include="Poco\Clarizen\Salary.cs" />
+    <Compile Include="Poco\Clarizen\Task.cs" />
+    <Compile Include="Poco\Clarizen\Timesheet.cs" />
+    <Compile Include="Poco\Clarizen\Topic.cs" />
+    <Compile Include="Poco\Clarizen\TopicLink.cs" />
+    <Compile Include="Poco\Clarizen\User.cs" />
+    <Compile Include="Poco\Clarizen\UserGroup.cs" />
+    <Compile Include="Poco\Clarizen\WorkItem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\RequestHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
